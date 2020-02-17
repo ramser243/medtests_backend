@@ -1,0 +1,7 @@
+venv
+*.pyc
+.vscode
+migrations
+.idea
+.env
+dev.db
