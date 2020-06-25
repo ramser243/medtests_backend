@@ -4,7 +4,7 @@ from flask import Flask, Blueprint
 from tests_backend import commands
 from tests_backend.extensions import db, migrate, mail
 from tests_backend.api.restplus import api
-from tests_backend.api.endpoints import themes_route, questions_route
+from tests_backend.api.endpoints import themes_route, questions_route, admin_route, answers_route
 from tests_backend.settings import ProdConfig
 from flask_cors import CORS
 
@@ -37,6 +37,8 @@ def register_blueprints(app):
     api.init_app(blueprint)
     api.add_namespace(themes_route)
     api.add_namespace(questions_route)
+    api.add_namespace(admin_route)
+    api.add_namespace(answers_route)
     app.register_blueprint(blueprint)
     return None
 

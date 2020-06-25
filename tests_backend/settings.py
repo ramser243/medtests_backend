@@ -36,6 +36,9 @@ class BaseConfig(object):
     MAIL_USERNAME=env.str('MAIL_USERNAME', default=None)
     MAIL_PASSWORD=env.str('MAIL_PASSWORD', default=None)
 
+    ADMIN_LOGIN=env.str('ADMIN_LOGIN', default=None)
+    ADMIN_PASSWORD=env.str('ADMIN_PASSWORD', default=None)
+
 class ProdConfig(BaseConfig):
     """Production configuration."""
     ENV = 'prod'
